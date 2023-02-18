@@ -46,3 +46,52 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/kEAtvxk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+4. Next we will go to our Virtual machine that we created. Click on “Connect” and choose “My IP” and click Request access.  Request access will validate and then it will say “approved” (give it a little time).  Click on the networking tab and you will see that our VM is protected by JIT (Just In Time) access rule on port 3389 RDP. This means that only we have access to this virtual machine. Anybody else who tries to access it will be denied since they do not have permission.
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/0AiezB3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+5. Now we will create a Log Analytics workspace. This will give a us a place to collect and see the data from Azure resources we created/ are using., but in order to do this we must open up Microsoft Sentinel in the azure search bar. When you get to the Microsoft Sentinel home page click “create” then “create new workspace”. Choose the same resource group that you used for the VM and same region. Click review + create.
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+<br />
