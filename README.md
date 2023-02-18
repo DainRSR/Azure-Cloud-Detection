@@ -122,7 +122,7 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/Xkvcro8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. Now that we have our SIEM setup. We need to log into our Virtual Machine so we can colect some Log Analytics. Go to your virtual machine and look for the public  IP address. Copy it and open your remote desktop and past the IP address in it or if you are on MAC then download Microsoft Remote Desktop and install it and paste the IP address to connect. You will need your username and pasword that we created earlier ot gain access to your VM. 
+14. Now that we have our SIEM setup. We need to log into our Virtual Machine so we can colect some Log Analytics. Go to your virtual machine and look for the public  IP address. Copy it and open your remote desktop and past the IP address in it or if you are on MAC then download Microsoft Remote Desktop and install it and paste the IP address to connect. You will need your username and pasword that we created earlier to gain access to your VM. 
 <br />
   
   <p>
