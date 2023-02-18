@@ -9,7 +9,7 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
-- Microsoft Sentinel
+- Microsoft Sentinel (SIEM)
 - Azure Log Analytics
 - KQL to query logs
 - Congifure windows security policies
@@ -54,44 +54,129 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 4. Next we will go to our Virtual machine that we created. Click on “Connect” and choose “My IP” and click Request access.  Request access will validate and then it will say “approved” (give it a little time).  Click on the networking tab and you will see that our VM is protected by JIT (Just In Time) access rule on port 3389 RDP. This means that only we have access to this virtual machine. Anybody else who tries to access it will be denied since they do not have permission.
 <br />
   
-  <p>
-<img src="https://i.imgur.com/0AiezB3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+<img src="https://i.imgur.com/0PYPzjq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>    
 </p>
 <p>
-5. Now we will create a Log Analytics workspace. This will give a us a place to collect and see the data from Azure resources we created/ are using., but in order to do this we must open up Microsoft Sentinel in the azure search bar. When you get to the Microsoft Sentinel home page click “create” then “create new workspace”. Choose the same resource group that you used for the VM and same region. Click review + create.
+5. Now we will create a Log Analytics workspace. This will give a us a place to collect and see the data from Azure resources we created/are using, but in order to do this we must open up Microsoft Sentinel in the azure search bar. When you get to the Microsoft Sentinel home page click “create” then “create new workspace”. Choose the same resource group that you used for the VM and same region. Click review + create.
+<br />
+  
+<p>
+<img src="https://i.imgur.com/vGPobyV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DlUP0iJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>    
+</p>
+<p>
+6. After your workspace is finished creating choose your workspace you just created and click add.
 <br />
   
   <p>
-<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cqzmrl8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-
+7. The Microsoft Sentinel home screen should appear after your workspace is finished deploying. 
 <br />
   
   <p>
-<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/piNFVKO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>  
 </p>
 <p>
-
+8. We currently don't have any data coming into our SIEM (security information & event management) so we will click Data Connectors under configuration and we will be able to choose what kind of data we want incoming from whatever resources we choose.
+<br />
+  
+<p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
 <br />
   
   <p>
-<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Y9tXEm1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+10. Click 'create data collection rule'
+<br />
 
+<p>
+<img src="https://i.imgur.com/hHaaeFF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+11. Create a name for your 'rule' and click next resources. 
 <br />
   
   <p>
-<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/U0jijhb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-
+12. Click add resources and select the Virtual Machine you created. CLick add and then 'Next Collect' and make sure "All security rules' is selectec and click 'create = review' and then click 'create'. 
 <br />
   
   <p>
-<img src="https://i.imgur.com/6Tj1ViZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/NXcUW3h.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-
+13. Go back to the Microsoft Sentinel page and you'll see that the Windows Security Events via AMA has been connected. 
 <br />
+  
+  <p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+<p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />
+  
+<p>
+<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+<br />   
