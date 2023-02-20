@@ -126,31 +126,31 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <br />
   
   <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2e0kifj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+15. After we log into our VM go to the start menu and search for "Event Viewer".
 <br />
   
   <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/pNQSVwZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+16. Open it and click on 'Windows Logs' and select SECURITY. As you can see there a few other logs you can view like SETUP, SYSTEM and APPLICATION, but we are focusing on Security for this lab. When you click on security you will see a list of things, search for the number '4624' and click it. On the bottom portion of the page we can see the log data showing next to 'Computer:' we have successfully logged into our VM and the date and time we logged in. 
 <br />
   
   <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oWLNXKv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+17. Now lets go back to our Azure account and we will open up Microsoft Sentinel to view the log data in our SIEM. This is a perfect place to for cyber security professionals to view data securely and effectively in this centralized location. When you get to the main page of Sentinel click on 'Logs'. 
 <br />
   
   <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cozVacT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+18. Next we will be introducing KQL which stands for Kustko Query Language. This is the language we will use to retrieve the data from the event logs. Follow the basic KQL I have written in the photo. Lets take a dive into what the first word on each line will help us to achieve. "SecurityEvent" is refering to the event viewer we looked at from our Virtual Machine. Remeber all the log data that was in there, this where we are pulling from. "Where" is refering to the place in the logs that we want pulled and that is 4624 which is our successful log in from out VM. "project" will give us the time/date, computer and account that was used to log on. Now lets RUN our KQL, click RUN!  
 <br />
   
   <p>
