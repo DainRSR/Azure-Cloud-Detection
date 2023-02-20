@@ -147,10 +147,10 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <br />
   
   <p>
-<img src="https://i.imgur.com/cozVacT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/fqYxL5K.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-18. Next we will be introducing KQL which stands for Kustko Query Language. This is the language we will use to retrieve the data from the event logs. Follow the basic KQL I have written in the photo. Lets take a dive into what the first word on each line will help us to achieve. "SecurityEvent" is refering to the event viewer we looked at from our Virtual Machine. Remeber all the log data that was in there, this where we are pulling from. "Where" is refering to the place in the logs that we want pulled and that is 4624 which is our successful log in from out VM. "project" will give us the time/date, computer and account that was used to log on. Now lets RUN our KQL, click RUN!  
+18. Next we will be introducing KQL which stands for Kustko Query Language. This is the language we will use to retrieve the data from the event logs. Follow the basic KQL I have written in the photo. Lets take a dive into what the first word on each line will help us to achieve. "SecurityEvent" is refering to the event viewer we looked at from our Virtual Machine. Remeber all the log data that was in there, this where we are pulling from. "Where" is refering to the place in the logs that we want pulled and that is 4624 which is our successful log in from out VM. "project" will give us the time/date, computer and account that was used to log on. Now lets RUN our KQL, click RUN! Now we can see all of the time we have successfully attempted to log into our VM. That's pretty cool!But guess what? There's no account name. We will have to create this when we make our Analytic Rule since Sentinel does not automatically generate the account name.  
 <br />
   
   <p>
