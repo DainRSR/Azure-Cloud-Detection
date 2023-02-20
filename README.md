@@ -157,7 +157,7 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+19. We will create a task schedule. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM 
 <br />
   
   <p>
