@@ -1,7 +1,7 @@
 # Azure-Cloud-Detection
 We will analyze an environment for any threats/vulnerabilities that could compromise our network.
 <p align="center">
-<img src="https://i.imgur.com/DJmEXEB.png" alt="Traffic Examination"/>
+<img src="https://i.imgur.com/5HhsRuT.png" alt="Traffic Examination"/>
 </p>
 
 
@@ -159,24 +159,3 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <p>
 19. (TO BE CONTINUED, RAN INTO SOME VM ISSUES) We will create a task schedule. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM 
 <br />
-  
-  <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
- 
-<br />
-  
-<p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-
-<br />
-  
-<p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-
-<br />   
