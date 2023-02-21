@@ -154,29 +154,29 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <br />
   
   <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-19. We will create a task schedule. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM 
+19. (TO BE CONTINUED, RAN INTO SOME VM ISSUES) We will create a task schedule. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM 
 <br />
   
   <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+ 
 <br />
   
 <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+
 <br />
   
 <p>
-<img src="https://i.imgur.com/Ex90VyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. In the search bar type WINDOWS and select 'Windows Security Events via AMA' and then click open connector page. 
+
 <br />   
