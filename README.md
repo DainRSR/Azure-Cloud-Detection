@@ -153,9 +153,37 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 18. Next we will be introducing KQL which stands for Kustko Query Language. This is the language we will use to retrieve the data from the event logs. Follow the basic KQL I have written in the photo. Lets take a dive into what the first word on each line will help us to achieve. "SecurityEvent" is refering to the event viewer we looked at from our Virtual Machine. Remeber all the log data that was in there, this where we are pulling from. "Where" is refering to the place in the logs that we want pulled and that is 4624 which is our successful log in from out VM. "project" will give us the time/date, computer and account that was used to log on. Now lets RUN our KQL, click RUN! Now we can see all of the time we have successfully attempted to log into our VM. That's pretty cool!But guess what? There's no account name. We will have to create this when we make our Analytic Rule since Sentinel does not automatically generate the account name.  
 <br />
   
-  <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+<img src="https://i.imgur.com/W2gvA2w.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-19. (TO BE CONTINUED, RAN INTO SOME VM ISSUES) We will create a task schedule. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM 
+19. Now lets configure some security policies so we are able to create our task event. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM and search for "Local Windows Policy" and expand Advanced Audit Policy Configuration then System Audit Policies, Object Access and then double click "Audit Other Objects Access Events". Select configure and select success and Failure. CLick apply and ok. 
+<br />
+
+<p>
+<img src="https://i.imgur.com/fIVKIDC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+20. Next lets create our task so we can see some activity. Search for "Windows Task Scheduler" and open it. Select create task. Give your task whatever name you desire and go to the bottom page and where it says 'configure' change it to Windows 10. Select 'Triggers' up top and here you can set the date and time. Select a time matching wherever you live. Next click the Action tab and here we can set what action wi3ll occur when this event is triggered. You can click browse and select a program to open and click ok. Go to Event Viewer and you can see the event 4698 has been triggered. This is dependant on what time you set and you will notice the program you selected to open during the event trigger has opened. 
+<br />
+
+<p>
+<img src="https://i.imgur.com/Wa0TjX6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+21. Now we can write our Analytic RUle using KQL in Azure that will give us an alert whenever the rule we create is triggered by an event. Go to the Microsoft Sentinel page and on the left side scroll down click "Analytics" then click 'create' and scheduled query. 
+<br />
+
+<p>
+<img src="https://i.imgur.com/jb83ee5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+22. Create a name for your Analytic rule and a brief description. Then choose a few Tactics and Techniques that you want the rule to especially look out for when triggered like 'persistence, priveledge escalation, or initial access'. The severity we can keep on medium which is already set. This information will help alert any analyst that may come across our system being breached.   
+<br />
+
+<p>
+<img src="https://i.imgur.com/GQpNThu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+23. You can set you rule logic to run at whatever time you choose as long as it can correspond with each other.
 <br />
