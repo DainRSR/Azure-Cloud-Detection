@@ -224,10 +224,10 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <br />
   
 <p>
-<img src="https://i.imgur.com/43WpnnA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/v3xaAWP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-29. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. 
+29. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. As you can see we have a few incidents that came across and if you click on one you will see the rule we created. It's not assinged to anyone at the moment but that would be the Analyst who gets assigned the ticket to handle this persistent threat. 
 <br />
   
  <p>
