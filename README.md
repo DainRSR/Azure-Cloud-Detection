@@ -227,19 +227,18 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/v3xaAWP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-29. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. As you can see we have a few incidents that came across and if you click on one you will see the rule we created. It's not assinged to anyone at the moment but that would be the Analyst who gets assigned the ticket to handle this persistent threat. 
+29. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. As you can see we have a few incidents that came across and if you click on one you will see the rule we created. It's not assinged to anyone at the moment but that would be the Analyst who gets assigned the ticket to handle this persistent threat. They would use information like the host,user account and other information to better assess the situation to decide if the attack is a false positive (triggered but not of any threat) or true positive (triggered and NEEDS to be handled). 
 <br />
   
  <p>
-<img src="https://i.imgur.com/43WpnnA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7iFge6i.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-30. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. 
+30. Thats concludes our Cloud Detection Lab. Feel free to lookup more information on MITRE ATTACKS which explain how situations like this can be handled if it really were a real threat, how threat actors go about gaining access to our systems and how we as users can protect our information. Here is a link with very good information https://attack.mitre.org/tactics/TA0003/ 
 <br />
   
-  <p>
-<img src="https://i.imgur.com/43WpnnA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
 </p>
 <p>
-29. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. 
+31. Lastly, do not forget to go to your Azure resource group and delete it. This will prevent your account funds from being slowly depleted over time by having all the resources we created for this lab still running. 
 <br />
