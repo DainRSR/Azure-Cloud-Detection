@@ -234,7 +234,7 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/7iFge6i.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-30. Thats concludes our Cloud Detection Lab. Feel free to lookup more information on MITRE ATTACKS which explain how situations like this can be handled if it really were a real threat, how threat actors go about gaining access to our systems and how we as users can protect our information. Here is a link with very good information https://attack.mitre.org/tactics/TA0003/ 
+30. Thats concludes our Cloud Detection Lab. Feel free to lookup more information on MITRE ATTACKS which explain how situations like this can be handled if it really were a real threat, how threat actors go about gaining access to our systems and how we as users can protect our information. You can also look up scheduled tasks and account management. Here is a link with very good information https://attack.mitre.org/tactics/TA0003/ 
 <br />
   
 <p>
