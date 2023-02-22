@@ -185,5 +185,61 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/GQpNThu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-23. You can set you rule logic to run at whatever time you choose as long as it can correspond with each other.
+23. You can set you rule logic to run at whatever time you choose as long as it can correspond with each other. Feel free to use what I have set for this lab. 
+<br />
+
+<p>
+<img src="https://i.imgur.com/w4B4D4p.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+24. Now lets create a KQL to put in our Query Rule box beofre we can create the scheduled rule. 
+<br />
+  
+ <p>
+<img src="https://i.imgur.com/VfkmICB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+25. Feel free to open up a separate Azure portal window and go to Microsoft Sentinel and click Logs. Here we will enter our new KQL like we did before and 'Run' it. Checkout you EventData, we will need to extract information from their that have valuable information. 
+<br />
+  
+<p>
+<img src="https://i.imgur.com/AIFtybK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+26. We will need to add more KQL to extract the SubjectUser,TaskName, ClientprocessId, Username and other info from the EventData. Using the "parse" command this will allow us to extract data that we need and the "project" command will allow us to put the in formation in colums so it's easier to read. which is what we entered in the KQL. Now 'RUN' it. 
+<br />
+  
+<p>
+<img src="https://i.imgur.com/1eNszDG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+27. In this next step we can copy the KQL we just created and paste it into our Analytic Rule box from ealier. You may need to type the code out if it will not allow you to paste. 
+<br />
+  
+<p>
+<img src="https://i.imgur.com/brxBCFP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+28. Right below the KQL we just pasted, you will see 'Alert Enrichment', click on Entity Mapping and create a new one. Enrichment will let us put the vital information for any analyst investigation the triggered alert. USe the same details I have in the image show. These coincide with our KQL code. After this you can leave the rest of the settings as they are and create the rule. 
+<br />
+  
+<p>
+<img src="https://i.imgur.com/43WpnnA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+29. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. 
+<br />
+  
+ <p>
+<img src="https://i.imgur.com/43WpnnA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+30. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. 
+<br />
+  
+  <p>
+<img src="https://i.imgur.com/43WpnnA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+29. Next after the rule is created we can go back into our VM and create a new task in Task Scheduler the same way we did earlier. This may take a little time for an incident to appear in our Sentinel but you should see some. Just make sure to refresh your page. 
 <br />
