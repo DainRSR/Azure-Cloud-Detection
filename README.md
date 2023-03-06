@@ -108,7 +108,7 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/U0jijhb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-12. Click add resources and select the Virtual Machine you created. CLick add and then 'Next Collect' and make sure "All security rules' is selectec and click 'create = review' and then click 'create'. 
+12. Click add resources and select the Virtual Machine you created. Click add and then 'Next Collect' and make sure "All security rules' is selected and click 'create = review' and then click 'create'. 
 <br />
   
   <p>
@@ -157,14 +157,14 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/W2gvA2w.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-19. Now lets configure some security policies so we are able to create our task event. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM and search for "Local Windows Policy" and expand Advanced Audit Policy Configuration then System Audit Policies, Object Access and then double click "Audit Other Objects Access Events". Select configure and select success and Failure. CLick apply and ok. 
+19. Now lets configure some security policies so we are able to create our task event. This will allow us to set our system to do what we want at a specific time to generate alerts. Lets go back into our VM and search for "Local Windows Policy" and expand Advanced Audit Policy Configuration then System Audit Policies, Object Access and then double click "Audit Other Objects Access Events". Select configure and select success and Failure. Click apply and ok. 
 <br />
 
 <p>
 <img src="https://i.imgur.com/fIVKIDC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-20. Next lets create our task so we can see some activity. Search for "Windows Task Scheduler" and open it. Select create task. Give your task whatever name you desire and go to the bottom page and where it says 'configure' change it to Windows 10. Select 'Triggers' up top and here you can set the date and time. Select a time matching wherever you live. Next click the Action tab and here we can set what action wi3ll occur when this event is triggered. You can click browse and select a program to open and click ok. Go to Event Viewer and you can see the event 4698 has been triggered. This is dependant on what time you set and you will notice the program you selected to open during the event trigger has opened. 
+20. Next lets create our task so we can see some activity. Search for "Windows Task Scheduler" and open it. Select create task. Give your task whatever name you desire and go to the bottom page and where it says 'configure' change it to Windows 10. Select 'Triggers' up top and here you can set the date and time. Select a time matching wherever you live. Next click the Action tab and here we can set what action will occur when this event is triggered. You can click browse and select a program to open and click ok. Go to Event Viewer and you can see the event 4698 has been triggered. This is dependant on what time you set and you will notice the program you selected to open during the event trigger has opened. 
 <br />
 
 <p>
@@ -192,7 +192,7 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/w4B4D4p.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-24. Now lets create a KQL to put in our Query Rule box beofre we can create the scheduled rule. 
+24. Now lets create a KQL to put in our Query Rule box before we can create the scheduled rule. 
 <br />
   
  <p>
@@ -220,7 +220,7 @@ We will analyze an environment for any threats/vulnerabilities that could compro
 <img src="https://i.imgur.com/brxBCFP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-28. Right below the KQL we just pasted, you will see 'Alert Enrichment', click on Entity Mapping and create a new one. Enrichment will let us put the vital information for any analyst investigation the triggered alert. USe the same details I have in the image show. These coincide with our KQL code. After this you can leave the rest of the settings as they are and create the rule. 
+28. Right below the KQL we just pasted, you will see 'Alert Enrichment', click on Entity Mapping and create a new one. Enrichment will let us put the vital information for any analyst investigation the triggered alert. Use the same details I have in the image show. These coincide with our KQL code. After this you can leave the rest of the settings as they are and create the rule. 
 <br />
   
 <p>
